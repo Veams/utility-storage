@@ -4,7 +4,7 @@
  * Offers a simple API for storing Javascript objects in HTML5 web storage
  *
  * @module Storage
- * @version v1.0.0
+ * @version v1.0.1
  *
  * @author Andy Gutsche
  */
@@ -104,7 +104,7 @@ class Storage {
 	static get info() {
 		return {
 			name: 'Storage',
-			version: '1.0.0',
+			version: '1.0.1',
 			vc: true,
 			mod: false
 		};

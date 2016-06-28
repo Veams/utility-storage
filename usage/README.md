@@ -59,7 +59,7 @@ import Storage from './modules/storage/storage';
 /**
 * Init storage
 */
-new Storage({
+let myStorage = new Storage({
 	type: 'permanent' // or 'session',
 	name: 'someName' // custom namespace (e.g. from module)
 });
