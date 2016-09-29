@@ -54,13 +54,15 @@ Just initialize on demand.
 
 #### Import
 ``` js
+// @INSERT :: START @tag: js-import
 import Storage from './modules/storage/storage';
+// @INSERT :: END
 ```
 
 #### Initializing
 ``` js
 /**
-* Init storage
+* Init storage (on demand)
 */
 let myStorage = new Storage({
 	type: 'permanent', // or 'session'
