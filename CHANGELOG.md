@@ -1,3 +1,6 @@
+### v1.0.4
+- update module version
+
 ### v1.0.3
 - update README.md (Initializing)
 
