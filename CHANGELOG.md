@@ -1,3 +1,9 @@
+### v2.0.0
+- Add all important notes to readme
+- Exclude Insertpoints into own file
+- Add self-contained option
+- Refactor JS to support version 4 of Veams-JS
+
 ### v1.0.4
 - update module version
 
