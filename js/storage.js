@@ -4,7 +4,7 @@
  * Offers a simple API for storing Javascript objects in HTML5 web storage
  *
  * @module Storage
- * @version v2.0.0
+ * @version v2.1.0
  *
  * @author Andy Gutsche
  */
@@ -57,7 +57,7 @@ function initialize() {
  *
  * @private
  *
- * @param {object} wrapperObj - wrapper object
+ * @param {Object} wrapperObj - wrapper object
  */
 function updateWrapperObj(wrapperObj) {
 	window[_storage.get(this)].setItem(_options.get(this).name, JSON.stringify(wrapperObj));
@@ -67,7 +67,7 @@ function updateWrapperObj(wrapperObj) {
  * Get wrapper object
  *
  * @private
- * @return {object} - wrapper object
+ * @return {Object} - wrapper object
  */
 function getWrapperObj() {
 	return JSON.parse(window[_storage.get(this)].getItem(_options.get(this).name)) || {};
@@ -84,9 +84,9 @@ class Storage {
 	/**
 	 * Constructor for our class
 	 *
-	 * @param {object} opts - options which will be passed in as JSON object
-	 * @param {string} opts.type - storage type ('permanent' || 'session')
-	 * @param {string} opts.name - namespace in which items will be saved
+	 * @param {Object} opts - options which will be passed in as JSON object
+	 * @param {String} opts.type - storage type ('permanent' || 'session')
+	 * @param {String} opts.name - namespace in which items will be saved
 	 */
 	constructor(opts) {
 		let options = {
@@ -104,10 +104,28 @@ class Storage {
 	static get info() {
 		return {
 			name: 'Storage',
-			version: '2.0.0',
+			version: '2.1.0',
 			vc: true,
 			mod: false
 		};
+	}
+
+	/**
+	 * Get length of wrapper object
+	 *
+	 * @public
+	 *
+	 * @return {Number} - length of wrapper object
+	 */
+	get length() {
+
+		if (!_storage.get(this)) {
+			return false;
+		}
+
+		let wrapperObj = this::getWrapperObj();
+
+		return Object.keys(wrapperObj).length;
 	}
 
 	/**
@@ -115,10 +133,11 @@ class Storage {
 	 *
 	 * @public
 	 *
-	 * @param {string} name - item name
-	 * @param {object} obj - object to save
+	 * @param {String} name - item name
+	 * @param {Object} obj - object to save
 	 */
 	setItem(name, obj) {
+
 		if (!_storage.get(this)) {
 			return;
 		}
@@ -134,10 +153,11 @@ class Storage {
 	 *
 	 * @public
 	 *
-	 * @param {string} name - item name
-	 * @return {object} - object retrieved by item name
+	 * @param {String} name - item name
+	 * @return {Object} - object retrieved by item name
 	 */
 	getItem(name) {
+
 		if (!_storage.get(this)) {
 			return false;
 		}
@@ -152,9 +172,10 @@ class Storage {
 	 *
 	 * @public
 	 *
-	 * @param {string} name - item name
+	 * @param {String} name - item name
 	 */
 	removeItem(name) {
+
 		if (!_storage.get(this)) {
 			return;
 		}
@@ -171,6 +192,7 @@ class Storage {
 	 * @public
 	 */
 	clear() {
+
 		if (!_storage.get(this)) {
 			return;
 		}

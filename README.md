@@ -50,6 +50,10 @@ let myStorage = new Storage({
 	 * @param {String} opts.type - storage type ('permanent' || 'session')
 	 * @param {String} opts.name - namespace in which items will be saved
 	 */
+	 
+	 
+### Properties
+- length {`Number`} - length of storage (item count)
 
 ### Methods
 

@@ -1,3 +1,6 @@
+### v2.1.0
+- Add length property
+
 ### v2.0.0
 - Add all important notes to readme
 - Exclude Insertpoints into own file
