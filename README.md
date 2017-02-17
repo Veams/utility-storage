@@ -8,6 +8,7 @@
 ## Description
 
 This utility offers a simple API for storing Javascript objects in HTML5 web storage
+using distinct namespaces
 
 -----------
 
@@ -53,7 +54,7 @@ let myStorage = new Storage({
 	 
 	 
 ### Properties
-- length {`Number`} - length of storage (item count)
+- length {`Number`} - item count
 
 ### Methods
 
@@ -72,7 +73,16 @@ let myStorage = new Storage({
 	 * @param {String} name - item name
 	 * @return {Object} - object retrieved by item name
 	 */
-	 
+
+#### getAllItems ()
+	/**
+	 * Get all items
+	 *
+	 * @public
+	 *
+	 * @return {Object} - object containing all items
+	 */
+
 #### removeItem (name:String)
 	/**
 	 * Remove item by name

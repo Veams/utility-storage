@@ -1,10 +1,11 @@
 /**
  * Represents a storage class.
  *
- * Offers a simple API for storing Javascript objects in HTML5 web storage
+ * Offers a simple API for storing Javascript objects in
+ * HTML5 web storage using distinct namespaces
  *
  * @module Storage
- * @version v2.1.0
+ * @version v2.2.0
  *
  * @author Andy Gutsche
  */
@@ -104,23 +105,23 @@ class Storage {
 	static get info() {
 		return {
 			name: 'Storage',
-			version: '2.1.0',
+			version: '2.2.0',
 			vc: true,
 			mod: false
 		};
 	}
 
 	/**
-	 * Get length of wrapper object
+	 * Get item count for current namespace
 	 *
 	 * @public
 	 *
-	 * @return {Number} - length of wrapper object
+	 * @return {Number} - item count
 	 */
 	get length() {
 
 		if (!_storage.get(this)) {
-			return false;
+			return 0;
 		}
 
 		let wrapperObj = this::getWrapperObj();
@@ -159,12 +160,28 @@ class Storage {
 	getItem(name) {
 
 		if (!_storage.get(this)) {
-			return false;
+			return null;
 		}
 
 		let wrapperObj = this::getWrapperObj();
 
 		return wrapperObj[name];
+	}
+
+	/**
+	 * Get all items
+	 *
+	 * @public
+	 *
+	 * @return {Object} - object containing all items
+	 */
+	getAllItems() {
+
+		if (!_storage.get(this)) {
+			return null;
+		}
+
+		return this::getWrapperObj();
 	}
 
 	/**

@@ -1,3 +1,6 @@
+### v2.2.0
+- Add method `getAllItems`
+
 ### v2.1.0
 - Add length property
 
