@@ -1,3 +1,6 @@
+### v3.0.0
+- Add support for Veams v5.0.0 and higher
+
 ### v2.2.0
 - Add method `getAllItems`
 

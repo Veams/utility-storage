@@ -5,13 +5,15 @@
  * HTML5 web storage using distinct namespaces
  *
  * @module Storage
- * @version v2.2.0
+ * @version v3.0.0
  *
  * @author Andy Gutsche
  */
 
-import App from '../../app';
-import Helpers from '../../utils/helpers';
+import {Veams} from 'app';
+
+// Variables
+const Helpers = Veams.helpers;
 
 /**
  * ####################################################
@@ -34,7 +36,6 @@ const _options = new WeakMap();
  * @private
  */
 function initialize() {
-	App.registerModule && App.registerModule(Storage.info, this.el);
 
 	if (!window.localStorage || !window.sessionStorage) {
 		console.warn('Storage: HTML5 web storage not available');
@@ -95,7 +96,7 @@ class Storage {
 			name: ''
 		};
 
-		_options.set(this, Helpers.defaults(opts || {}, options));
+		_options.set(this, Helpers.extend(options, opts || {}));
 		this::initialize();
 	}
 
@@ -105,7 +106,7 @@ class Storage {
 	static get info() {
 		return {
 			name: 'Storage',
-			version: '2.2.0',
+			version: '3.0.0',
 			vc: true,
 			mod: false
 		};

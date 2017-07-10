@@ -13,7 +13,7 @@ using distinct namespaces
 -----------
 
 ## Requirements
-- `Veams-JS >= v4.0.0` - Basic JavaScript library.
+- `Veams >= v5.0.0` - [Veams Framework](https://github.com/Veams/veams)
 - [babel-preset-stage-0](https://github.com/babel/babel/tree/master/packages/babel-preset-stage-0) - Babel preset for stage 0 plugins.
 
 -----------
