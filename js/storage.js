@@ -5,7 +5,7 @@
  * HTML5 web storage using distinct namespaces
  *
  * @module Storage
- * @version v3.0.0
+ * @version v4.0.0
  *
  * @author Andy Gutsche
  */
@@ -106,7 +106,7 @@ class Storage {
 	static get info() {
 		return {
 			name: 'Storage',
-			version: '3.0.0',
+			version: '4.0.0',
 			vc: true,
 			mod: false
 		};
