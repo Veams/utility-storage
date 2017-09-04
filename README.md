@@ -1,5 +1,5 @@
 <p align='right'>
-    <a href='https://badge.fury.io/bo/veams-utility-storage'><img src='https://badge.fury.io/bo/veams-utility-storage.svg' alt='Bower version' height='20'></a>
+    <a href="https://badge.fury.io/js/veams-utility-storage"><img src="https://badge.fury.io/js/veams-utility-storage.svg" alt="npm version" height="18"></a>
     <a href='https://gitter.im/Sebastian-Fitzner/Veams?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge'><img src='https://badges.gitter.im/Sebastian-Fitzner/Veams.svg' alt='Gitter Chat' /></a>
 </p>
 
@@ -23,10 +23,6 @@ using distinct namespaces
 ### Installation with Veams
 
 `veams install vu storage`
-
-### Installation with Bower
-
-`bower install veams-utility-storage --save`
 
 -----------
 
