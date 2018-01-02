@@ -1,6 +1,6 @@
 {
 	"name": "veams-utility-storage",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"description": "Offers a simple API for storing Javascript objects in HTML5 web storage using distinct namespaces.",
 	"repository": {
 		"type": "git",

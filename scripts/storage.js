@@ -5,15 +5,13 @@
  * HTML5 web storage using distinct namespaces
  *
  * @module Storage
- * @version v5.0.0
+ * @version v5.1.0
  *
  * @author Andy Gutsche
  */
 
-import {Veams} from 'app';
-
-// Variables
-const Helpers = Veams.helpers;
+import { Veams } from 'app.veams';
+import extend from 'veams-helpers/lib/object/extend';
 
 /**
  * ####################################################
@@ -96,7 +94,7 @@ class Storage {
 			name: ''
 		};
 
-		_options.set(this, Helpers.extend(options, opts || {}));
+		_options.set(this, extend(options, opts || {}));
 		this::initialize();
 	}
 
@@ -105,7 +103,7 @@ class Storage {
 	 */
 	static get info() {
 		return {
-			version: '5.0.0',
+			version: '5.1.0',
 			vc: true,
 			mod: false
 		};

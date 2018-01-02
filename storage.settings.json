@@ -1,10 +1,9 @@
 {
 	"type": "utility",
-	"displayName": "u-storage",
 	"layout": "lyt-docs",
 	"hideTemplates": true,
 	"hideOutput": true,
 	"jsFiles": [
-		"storage.js"
+		"scripts/storage.js"
 	]
 }
