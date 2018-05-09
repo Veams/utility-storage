@@ -1,10 +1,10 @@
 {
-	"name": "veams-utility-storage",
-	"version": "5.1.0",
+	"name": "@veams/utility-storage",
+	"version": "1.0.0",
 	"description": "Offers a simple API for storing Javascript objects in HTML5 web storage using distinct namespaces.",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/Veams/veams-utility-storage.git"
+		"url": "git://github.com/Veams/utility-storage.git"
 	},
 	"keywords": [
 		"veams"
@@ -12,7 +12,7 @@
 	"author": "Andy Gutsche",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/Veams/veams-utility-storage/issues"
+		"url": "https://github.com/Veams/utility-storage/issues"
 	},
-	"homepage": "https://github.com/Veams/veams-utility-storage#readme"
+	"homepage": "https://github.com/Veams/utility-storage#readme"
 }

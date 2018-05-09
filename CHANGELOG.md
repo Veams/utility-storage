@@ -1,3 +1,11 @@
+## Namespaced Versions
+
+### v1.0.0
+
+- Migrate to use 
+
+	**@veams/helpers**
+
 ### v5.1.0
 - Make component compatible with veams-cli@2.0.xx
 

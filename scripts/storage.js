@@ -5,13 +5,12 @@
  * HTML5 web storage using distinct namespaces
  *
  * @module Storage
- * @version v5.1.0
+ * @version v1.0.0
  *
  * @author Andy Gutsche
  */
 
-import { Veams } from 'app.veams';
-import extend from 'veams-helpers/lib/object/extend';
+import extend from '@veams/helpers/lib/object/extend';
 
 /**
  * ####################################################
@@ -34,11 +33,9 @@ const _options = new WeakMap();
  * @private
  */
 function initialize() {
-
 	if (!window.localStorage || !window.sessionStorage) {
 		console.warn('Storage: HTML5 web storage not available');
-	}
-	else {
+	} else {
 		if (_options.get(this).type === 'permanent') {
 
 			_storage.set(this, 'localStorage');
@@ -60,7 +57,7 @@ function initialize() {
  * @param {Object} wrapperObj - wrapper object
  */
 function updateWrapperObj(wrapperObj) {
-	window[_storage.get(this)].setItem(_options.get(this).name, JSON.stringify(wrapperObj));
+	window[ _storage.get(this) ].setItem(_options.get(this).name, JSON.stringify(wrapperObj));
 }
 
 /**
@@ -70,7 +67,7 @@ function updateWrapperObj(wrapperObj) {
  * @return {Object} - wrapper object
  */
 function getWrapperObj() {
-	return JSON.parse(window[_storage.get(this)].getItem(_options.get(this).name)) || {};
+	return JSON.parse(window[ _storage.get(this) ].getItem(_options.get(this).name)) || {};
 }
 
 /**
@@ -78,7 +75,6 @@ function getWrapperObj() {
  * CLASS
  * ####################################################
  */
-
 
 class Storage {
 	/**
@@ -95,6 +91,7 @@ class Storage {
 		};
 
 		_options.set(this, extend(options, opts || {}));
+
 		this::initialize();
 	}
 
@@ -103,7 +100,7 @@ class Storage {
 	 */
 	static get info() {
 		return {
-			version: '5.1.0',
+			version: '1.0.0',
 			vc: true,
 			mod: false
 		};
@@ -143,7 +140,7 @@ class Storage {
 
 		let wrapperObj = this::getWrapperObj();
 
-		wrapperObj[name] = obj;
+		wrapperObj[ name ] = obj;
 		this::updateWrapperObj(wrapperObj);
 	}
 
@@ -163,7 +160,7 @@ class Storage {
 
 		let wrapperObj = this::getWrapperObj();
 
-		return wrapperObj[name];
+		return wrapperObj[ name ];
 	}
 
 	/**
@@ -197,7 +194,7 @@ class Storage {
 
 		let wrapperObj = this::getWrapperObj();
 
-		delete wrapperObj[name];
+		delete wrapperObj[ name ];
 		this::updateWrapperObj(wrapperObj);
 	}
 
@@ -212,7 +209,7 @@ class Storage {
 			return;
 		}
 
-		window[_storage.get(this)].removeItem(_options.get(this).name);
+		window[ _storage.get(this) ].removeItem(_options.get(this).name);
 	}
 }
 
@@ -223,3 +220,5 @@ class Storage {
  */
 
 export default Storage;
+
+

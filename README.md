@@ -1,5 +1,6 @@
 <p align='right'>
-    <a href="https://badge.fury.io/js/veams-utility-storage"><img src="https://badge.fury.io/js/veams-utility-storage.svg" alt="npm version" height="18"></a>
+    <a href="https://badge.fury.io/js/@veams/utility-storage"><img src="https://badge.fury
+    .io/js/@veams/utility-storage.svg" alt="npm version" height="18"></a>
     <a href='https://gitter.im/Sebastian-Fitzner/Veams?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge'><img src='https://badges.gitter.im/Sebastian-Fitzner/Veams.svg' alt='Gitter Chat' /></a>
 </p>
 
@@ -13,8 +14,7 @@ using distinct namespaces
 -----------
 
 ## Requirements
-- `Veams >= v5.0.0` - [Veams Framework](https://github.com/Veams/veams)
-- [babel-preset-stage-0](https://github.com/babel/babel/tree/master/packages/babel-preset-stage-0) - Babel preset for stage 0 plugins.
+- [@veams/helpers](https://github.com/Veams/helpers) - Object extend helper.
 
 -----------
 
@@ -22,7 +22,12 @@ using distinct namespaces
 
 ### Installation with Veams
 
-`veams install vu storage`
+``` bash
+veams install u storage
+```
+``` bash
+veams -i u storage
+```
 
 -----------
 
